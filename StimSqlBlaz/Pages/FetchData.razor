@@ -1,0 +1,25 @@
+﻿@page "/fetchdata"
+@using Stimulsoft.Base
+@using Stimulsoft.Report
+@using Stimulsoft.Report.Blazor
+
+<PageTitle>Weather forecast</PageTitle>
+
+@using StimSqlBlaz.Data
+@inject WeatherForecastService ForecastService
+
+<h1>Stim sql sample data</h1>
+<StiBlazorViewer Report="@report" />
+
+@code {
+    private StiReport report;
+
+    protected override async Task OnInitializedAsync()
+    {
+        //Create empty report object
+        report = new StiReport();
+
+        //Load report template
+        report.Load("reports/sql-blazor-sample.mrt");
+    }
+}

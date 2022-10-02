@@ -1,0 +1,196 @@
+{
+  "ReportVersion": "2022.4.1.0",
+  "ReportGuid": "4c088199082e409b9401660f762be936",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportCreated": "/Date(1664732544000-0700)/",
+  "ReportChanged": "/Date(1664732544000-0700)/",
+  "EngineVersion": "EngineV2",
+  "ReportUnit": "Inches",
+  "Script": "using System;\r\nusing System.Drawing;\r\nusing System.Windows.Forms;\r\nusing System.Data;\r\nusing Stimulsoft.Controls;\r\nusing Stimulsoft.Base.Drawing;\r\nusing Stimulsoft.Report;\r\nusing Stimulsoft.Report.Dialogs;\r\nusing Stimulsoft.Report.Components;\r\n\r\nnamespace Reports\r\n{\r\n    public class Report : Stimulsoft.Report.StiReport\r\n    {\r\n        public Report()        {\r\n            this.InitializeComponent();\r\n        }\r\n\r\n        #region StiReport Designer generated code - do not modify\r\n\t\t#endregion StiReport Designer generated code - do not modify\r\n    }\r\n}\r\n",
+  "ReferencedAssemblies": {
+    "0": "System.Dll",
+    "1": "System.Drawing.Dll",
+    "2": "System.Windows.Forms.Dll",
+    "3": "System.Data.Dll",
+    "4": "System.Xml.Dll",
+    "5": "Stimulsoft.Controls.Dll",
+    "6": "Stimulsoft.Base.Dll",
+    "7": "Stimulsoft.Report.Dll"
+  },
+  "Dictionary": {
+    "DataSources": {
+      "0": {
+        "Ident": "StiSqlSource",
+        "Name": "ReportScores",
+        "Alias": "ReportScores",
+        "Key": "71a36133e0704dcd8727690fd9e1e9a9",
+        "Columns": {
+          "0": {
+            "Name": "StudentGroupId",
+            "Index": -1,
+            "NameInSource": "StudentGroupId",
+            "Alias": "StudentGroupId",
+            "Type": "System.Int32"
+          },
+          "1": {
+            "Name": "StudentId",
+            "Index": -1,
+            "NameInSource": "StudentId",
+            "Alias": "StudentId",
+            "Type": "System.Int32"
+          },
+          "2": {
+            "Name": "TeacherId",
+            "Index": -1,
+            "NameInSource": "TeacherId",
+            "Alias": "TeacherId",
+            "Type": "System.Int32"
+          },
+          "3": {
+            "Name": "CompletedDate",
+            "Index": -1,
+            "NameInSource": "CompletedDate",
+            "Alias": "CompletedDate",
+            "Type": "System.DateTime"
+          },
+          "4": {
+            "Name": "Score",
+            "Index": -1,
+            "NameInSource": "Score",
+            "Alias": "Score",
+            "Type": "System.Decimal"
+          },
+          "5": {
+            "Name": "Question",
+            "Index": -1,
+            "NameInSource": "Question",
+            "Alias": "Question",
+            "Type": "System.String"
+          },
+          "6": {
+            "Name": "Source",
+            "Index": -1,
+            "NameInSource": "Source",
+            "Alias": "Source",
+            "Type": "System.String"
+          },
+          "7": {
+            "Name": "DisplayName",
+            "Index": -1,
+            "NameInSource": "DisplayName",
+            "Alias": "DisplayName",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "MS SQL",
+        "SqlCommand": "select * from ReportScores"
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiSqlDatabase",
+        "Name": "MS SQL",
+        "Alias": "MS SQL",
+        "ConnectionStringEncrypted": "9HjxyVZUe/XhTbnc5JigN8RUy6FhS+PBcQW98W9x9mfDcNHrW0hj3WlG2YhhXOBj3GD7oWFJo4Hsbc38Y1BlL9NWT0liSUvV6EmclGolpOedVsvCXk37pGJJuZjoBGVj2WCnCddWas1vTbHMTvglL4lu9UhiXsPxRUTZ2OFMZRudcNmIRnPr+WJE6IDpWOAvwlTNCc1aQ5VpbE1EYAThdo1U"
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "aa2f461359914aa788be7aaf5a4ef9e9",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiTable",
+          "Name": "TableReportScores",
+          "ClientRectangle": "0,0.2,7.72,0.3",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiTableCell",
+              "Name": "TableReportScores_Cell1",
+              "ClientRectangle": "0,0,2.6,0.3",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{ReportScores.DisplayName}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 0
+            },
+            "1": {
+              "Ident": "StiTableCell",
+              "Name": "TableReportScores_Cell2",
+              "ClientRectangle": "2.6,0,2.6,0.3",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{ReportScores.Score}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 1
+            },
+            "2": {
+              "Ident": "StiTableCell",
+              "Name": "TableReportScores_Cell3",
+              "ClientRectangle": "5.2,0,2.52,0.3",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{ReportScores.Source}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 2
+            }
+          },
+          "MinHeight": 0.1,
+          "DataSourceName": "ReportScores",
+          "RowCount": 1,
+          "ColumnCount": 3,
+          "NumberID": 3
+        }
+      },
+      "PaperSize": "Letter",
+      "PageWidth": 8.5,
+      "PageHeight": 11.0,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 0.39,
+        "Right": 0.39,
+        "Top": 0.39,
+        "Bottom": 0.39
+      }
+    }
+  }
+}
